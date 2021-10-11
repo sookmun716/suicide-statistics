@@ -1,0 +1,142 @@
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+"width": 800,
+"height": 500,
+"title": "Country Suicide Rate per 100k", "projection": {"type": "equalEarth"},
+"layer": [
+{
+  "data": {"url": "https://github.com/sookmun716/suicide-statistics/blob/80daefe5f55f1a62ccc6a85ade7f30ddd026d347/map.json" ,
+  "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+},
+"mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"} },
+{
+  "data": {
+  "url": "https://github.com/sookmun716/suicide-statistics/blob/80daefe5f55f1a62ccc6a85ade7f30ddd026d347/map.json" ,
+  "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+},
+"transform": [
+{
+  "lookup": "properties.name",
+  "from": {
+    "data": {"url": "https://github.com/sookmun716/suicide-statistics/blob/80daefe5f55f1a62ccc6a85ade7f30ddd026d347/Country-suicide-rate-per-100k.csv"},
+    "key": "country",
+    "fields": ["rate_per_100k"]}
+},
+{
+  "calculate": "datum.rate_per_100k",
+  "as": "Rate/100k"
+}
+],
+"selection": {
+    "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
+    "select": {"type": "multi"}},
+    "mark": {"type": "geoshape", "cursor":"pointer"},
+    "encoding": {
+      "color":{
+        "field": "Rate/100k",
+        "type": "quantitative",
+        "scale": {
+          "type": "threshold",
+          "domain": [10, 20, 30],
+          "scheme": {"name": "purples"}
+        }
+      },
+      "fillOpacity": {
+      "condition": {"selection": "select", "value": 1},
+      "value": 0.3},
+    "strokeWidth": {
+      "condition": [{
+        "test": {"and": [{"selection": "select"},
+        "length(data(\"select_store\"))"]},
+      "value": 2
+      },
+    {"selection": "highlight", "value": 1}],
+    "value": 0},
+      "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "Country"},
+      {"field": "Rate/100k", "type": "quantitative", "format": ".2f", "title": "Suicide Rate / 100k"}
+    ]
+    }
+  },
+  {
+"data": {
+   "values": [{}]
+},
+"encoding": {
+  "latitude": {"datum": 55.751244},
+  "longitude": {"datum": 105.618423}
+},
+"layer": [{
+  "mark": {
+    "type": "text",
+    "fill":"white",
+    "align": "right",
+    "baseline": "bottom",
+    "x": "width",
+    "text": "Russia"
+  }
+}]
+},
+{
+"data": {
+   "values": [{}]
+},
+"encoding": {
+  "latitude": {"datum": -30},
+  "longitude": {"datum": 147}
+},
+"layer": [{
+  "mark": {
+    "type": "text",
+    "fill":"white",
+    "fontSize":8,
+    "align": "right",
+    "baseline": "bottom",
+    "x": "width",
+    "text": "Australia"
+  }
+}]
+},
+{
+"data": {
+   "values": [{}]
+},
+"encoding": {
+  "latitude": {"datum": 35},
+  "longitude": {"datum": -98}
+},
+"layer": [{
+  "mark": {
+    "type": "text",
+    "fill":"white",
+    "fontSize":8,
+    "align": "right",
+    "baseline": "bottom",
+    "x": "width",
+    "text": "USA"
+  }
+}]
+},
+{
+"data": {
+   "values": [{}]
+},
+"encoding": {
+  "latitude": {"datum": -50},
+  "longitude": {"datum": -35}
+},
+"layer": [{
+  "mark": {
+    "type": "text",
+    "fill":"black",
+    "fontSize":8,
+    "align": "right",
+    "baseline": "bottom",
+    "x": "width",
+    "text": "Argentina"
+  }
+}]
+}
+],
+"config": {"view": {"stroke": "transparent"}}
+}
