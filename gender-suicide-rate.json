@@ -1,0 +1,84 @@
+
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": { "url": "https://raw.githubusercontent.com/sookmun716/suicide-statistics/main/Gender-suicide-rate.csv"},
+    "config": {
+    "view": {"stroke": "transparent" },
+    "axis": {"grid":false}
+    },
+    "spacing": 0,
+    "hconcat": [{
+    "transform": [{
+    "filter": {"field": "gender", "equal": "female"}
+    }],
+    "title": "Female",
+    "mark": "bar",
+    "width": 350,
+    "encoding": {
+    "y": {
+    "field": "age",
+    "type": "ordinal",
+    "axis": null,
+    "sort": "descending"
+    },
+    "x": {
+    "field": "rate_per_100k",
+    "title": "Suicide Rate/100k",
+    "type":"quantitative",
+    "sort": "descending",
+    "scale": {"domain": [0, 25]}
+    },
+    "color": {
+    "field": "gender",
+    "type": "ordinal",
+    "scale": {"range": ["#e7969c", "#1f77b4"]},
+    "legend": null
+    }
+    }
+    }, {
+    "width": 80,
+    "mark": {
+    "type": "text",
+    "align": "center"
+    },
+    "encoding": {
+    "y": {
+    "field": "age", 
+    "type": "ordinal", 
+    "axis": null,
+    "sort": "descending"
+    },
+    "text": {
+    "field": "age", 
+    "type": "ordinal"
+    }
+    }
+    }, {
+    "transform": [{
+    "filter": {"field": "gender", "equal": "male"}
+    }],
+    "title": "Male",
+    "mark": "bar",
+    "width": 350,
+    "encoding": {
+    "y": {
+    "field": "age", "title": null,
+    "type": "ordinal",
+    "axis": null,
+    "sort": "descending"
+    },
+    "x": {
+    "field": "rate_per_100k",
+    "type":"quantitative",
+    "title": "Suicide Rate/100k",
+    "scale": {"domain": [0, 25]}
+    },
+    "color": {
+    "field": "gender",
+    "type": "ordinal",
+    "legend": null
+    }
+    }
+    }]
+    }
