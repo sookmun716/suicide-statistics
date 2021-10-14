@@ -25,6 +25,7 @@ Cabo Verde,11.15309032
 Canada,12.9916685
 Cayman Islands,0
 Chile,9.899092333
+China,8.1
 Colombia,5.389369152
 Costa Rica,6.834031789
 Croatia,24.7864007
@@ -55,6 +56,8 @@ Honduras,0
 Hong Kong,17.48280281
 Hungary,39.67527048
 Iceland,12.20746264
+India,12.6
+Indonesia,2.4
 Iran,3.210047081
 Iraq,0
 Ireland,10.23051751
@@ -62,17 +65,21 @@ Israel,8.788757051
 Italy,8.714928423
 Jamaica,0.4393149649
 Japan,22.19254943
-Jordan,0
+Jordan,1.5
 Kazakhstan,29.33028186
 Kiribati,6.100672874
 Kuwait,1.055884912
 Kyrgyzstan,14.81005396
 Latvia,32.47988088
+Liberia,4.5
+Libya,4.5
 Lithuania,37.69228886
 Luxembourg,17.31422953
 Macau,14.3118248
-Malaysia,0
+Malawi,5.4
+Malaysia,4.8
 Maldives,1.367422345
+Mali,4.1
 Malta,4.23457445
 Martinique,9.74046928
 Mauritius,10.33443896
@@ -82,17 +89,22 @@ Monaco,0
 Mongolia,8.106367948
 Montenegro,9.950312568
 Montserrat,0
-Morocco,0
+Morocco,7.1
+Myanmar,2.7
+Nepal,9,0
 Netherlands,11.05095571
-Netherlands Antilles,
+Netherlands Antilles,0
 New Zealand,14.29254855
 Nicaragua,6.567177759
+Niger.5.3
+Nigeria,3.5
 Norway,10.49272782
 Occupied Palestinian Territory,
 Oman,0.7357428442
+Pakistan,8.9
 Panama,5.285175727
 Paraguay,3.827609832
-Peru,0
+Peru,2.9
 Philippines,1.579111739
 Poland,12.62785492
 Portugal,10.23677423
@@ -119,6 +131,7 @@ Slovenia,31.01360242
 South Africa,0.9644707443
 Spain,8.933508198
 Sri Lanka,37.7825071
+Sudan,3.8
 Suriname,22.13355138
 Sweden,11.5101347
 Switzerland,10.79741469
@@ -126,6 +139,8 @@ Syrian Arab Republic,0
 Macedonia,10.76567882
 Tajikistan,0
 Thailand,7.181446646
+Togo,8.8
+Tonga,3.8
 Trinidad and Tobago,12.71432415
 Tunisia,0
 Turkey,2.371190574
@@ -134,9 +149,10 @@ Turks and Caicos Islands,0
 Ukraine,25.84501994
 United Arab Emirates,1.317943342
 United Kingdom,7.626234771
-United States,13.60160698
+United States of America,13.60160698
 Uruguay,18.17116594
 Uzbekistan,8.490756755
 Venezuela,6.719679773
+Vietnam,7.5
 Virgin Islands,6.291391334
 Zimbabwe,0
