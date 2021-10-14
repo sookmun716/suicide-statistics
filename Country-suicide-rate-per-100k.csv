@@ -1,5 +1,6 @@
 country,rate_per_100k
 Albania,2.485891851
+Angola,6.1
 Anguilla,0
 Antigua and Barbuda,0.5331545955
 Argentina,10.53043029
@@ -15,24 +16,29 @@ Belarus,24.27747834
 Belgium,22.15419134
 Belize,5.532197909
 Bermuda,2.409755011
-Bolivia,0
+Bolivia,6.2
 Bosnia and Herz.,9.411514302
 Brazil,5.681115741
 British Virgin Islands,
 Brunei,2.249530691
 Bulgaria,19.27736424
 Cabo Verde,11.15309032
+Cambodia,4.9
+Cameroon,9.0
 Canada,12.9916685
 Cayman Islands,0
+Chad,6.4
 Chile,9.899092333
 China,8.1
 Colombia,5.389369152
+Comoros,5.4
 Costa Rica,6.834031789
 Croatia,24.7864007
 Cuba,13.76557898
 Cyprus,2.87369055
 Czech Republic,18.86846286
 Denmark,8.381998294
+Djibouti,9.4
 Dominica,1.121179615
 Dominican Republic,0
 Ecuador,6.06271558
@@ -44,22 +50,24 @@ Fiji,5.105296039
 Finland,17.84713769
 France,22.44660811
 French Guiana,11.74257881
+Gabon,8.4
 Georgia,4.178086849
 Germany,15.55980961
 Greece,4.106784717
 Grenada,2.11859114
 Guadeloupe,8.809253939
 Guatemala,2.982536521
+Guinea,7.0
 Guyana,20.70565139
-Haiti,0
-Honduras,0
+Haiti,9.6
+Honduras,2.1
 Hong Kong,17.48280281
 Hungary,39.67527048
 Iceland,12.20746264
 India,12.6
 Indonesia,2.4
 Iran,3.210047081
-Iraq,0
+Iraq,3.6
 Ireland,10.23051751
 Israel,8.788757051
 Italy,8.714928423
@@ -67,10 +75,13 @@ Jamaica,0.4393149649
 Japan,22.19254943
 Jordan,1.5
 Kazakhstan,29.33028186
+Kenya,6.1
 Kiribati,6.100672874
 Kuwait,1.055884912
 Kyrgyzstan,14.81005396
 Latvia,32.47988088
+Lebanon,2.8
+Lesotho,28.7
 Liberia,4.5
 Libya,4.5
 Lithuania,37.69228886
@@ -91,12 +102,13 @@ Montenegro,9.950312568
 Montserrat,0
 Morocco,7.1
 Myanmar,2.7
+Namibia,9.7
 Nepal,9,0
 Netherlands,11.05095571
 Netherlands Antilles,0
 New Zealand,14.29254855
 Nicaragua,6.567177759
-Niger.5.3
+Niger,5.3
 Nigeria,3.5
 Norway,10.49272782
 Occupied Palestinian Territory,
@@ -135,14 +147,15 @@ Sudan,3.8
 Suriname,22.13355138
 Sweden,11.5101347
 Switzerland,10.79741469
-Syrian Arab Republic,0
+Syrian Arab Republic,2.0
 Macedonia,10.76567882
-Tajikistan,0
+Tajikistan,4.3
+Tazania,4.3
 Thailand,7.181446646
 Togo,8.8
 Tonga,3.8
 Trinidad and Tobago,12.71432415
-Tunisia,0
+Tunisia,3.3
 Turkey,2.371190574
 Turkmenistan,8.771589906
 Turks and Caicos Islands,0
@@ -155,4 +168,5 @@ Uzbekistan,8.490756755
 Venezuela,6.719679773
 Vietnam,7.5
 Virgin Islands,6.291391334
-Zimbabwe,0
+Zambia,7.3
+Zimbabwe,4.1
