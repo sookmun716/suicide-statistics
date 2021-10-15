@@ -1,0 +1,142 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width":800,
+    "height":400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/sookmun716/suicide-statistics/main/Age-suicide-rate.csv"
+    },
+    "params": [
+      {
+        "name": "Age_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Overall",
+            "05-14",
+            "15-24",
+            "25-34",
+            "35-54",
+            "55-74",
+            "75+"
+          ],
+          "labels": [
+            "Show All",
+            "Overall",
+            "05-14 years",
+            "15-24 years",
+            "25-34 years",
+            "35-54 years",
+            "55-74 years",
+            "75+ years"
+          ],
+          "name": "Age Group Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {"filter": "Age_selection == null || datum.age == Age_selection"}
+    ],
+    "encoding": {
+      "x": {"field": "year", "type": "temporal","title":null},
+      "y": {
+        "field": "rate_per_100k",
+        "type": "quantitative",
+        "title": "Average Suicide Rate / 100K population",
+        "axis": {"titleFontSize": 10}
+      },
+      "color": {
+        "condition": {"selection": "hover", "field": "age", "type": "nominal","title":null},
+        "value": "grey"
+      },
+      "opacity": {"condition": {"selection": "hover", "value": 1}, "value": 0.075},
+      "tooltip": [
+        {"field": "year", "type": "temporal","title":"Year"},
+        {
+          "field": "rate_per_100k",
+          "type": "quantitative",
+          "title": "Average Suicide Rate",
+          "format":".2f"
+        }
+      ]
+    },
+    "layer": [
+      {
+        "selection": {
+          "hover": {
+            "type": "single",
+            "on": "mouseover",
+            "empty": "all",
+            "fields": ["age"],
+            "init": {"age": "Overall"}
+          }
+        },
+        "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+      },
+      {"mark": {"type": "line"}},
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -12,
+          "fontSize": 11.5,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "tooltip": [
+           {"field": "year", "type": "temporal","title":"Year"},
+           {
+            "field": "rate_per_100k",
+            "type": "quantitative",
+            "title": "Average Suicide Rate",
+            "format":".2f"
+           }
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "circle",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -12,
+          "fontSize": 10,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "tooltip": [
+           {"field": "year", "type": "temporal","title":"Year"},
+           {
+            "field": "rate_per_100k",
+            "type": "quantitative",
+            "title": "Average Suicide Rate",
+            "format":".2f"
+           }
+          ]
+        }
+      },
+          {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -15,
+          "fontSize": 11.5,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "tooltip": [
+           {"field": "year", "type": "temporal","title":"Year"},
+           {
+            "field": "rate_per_100k",
+            "type": "quantitative",
+            "title": "Average Suicide Rate",
+            "format":".2f"
+           }
+          ]
+        }
+      }
+    ],
+    "config": {"axis": {"grid": false},"view": {"stroke": "transparent"}}
+  }
