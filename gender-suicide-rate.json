@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
+    "width": 680,
     "height": 300,  
     "background":"beige",
     "data": { "url": "https://raw.githubusercontent.com/sookmun716/suicide-statistics/main/Gender-suicide-rate.csv",
@@ -37,7 +37,7 @@
     },
       "layer":[
             {"mark": "bar",
-            "width": 300},
+            "width": 340},
             {"mark": {
                 "type": "text",
                 "color":"black",
@@ -95,7 +95,7 @@
     ]
       },
       "layer": [
-        {"mark":"bar","width":300},
+        {"mark":"bar","width":340},
         {"mark": {
             "type": "text",
             "align": "right",
