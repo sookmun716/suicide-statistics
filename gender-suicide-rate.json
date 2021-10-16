@@ -1,5 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",  
+    "background":"beige",
+    "width":700,
+    "height":400,
     "data": { "url": "https://raw.githubusercontent.com/sookmun716/suicide-statistics/main/Gender-suicide-rate.csv",
       "format": {
           "type": "csv"}},
@@ -27,6 +30,8 @@
                 "legend": null
                 },
             "tooltip": [
+            {"field": "gender", "type": "nominal","title":"Sex"},
+            {"field": "age", "type": "nominal","title":"Age Group"},
             {"field": "rate_per_100k", "type": "quantitative", "title": "Suicide Rate/100k"}
           ]
     },
@@ -84,7 +89,9 @@
             }
         ,
     "tooltip": [
-      {"field": "rate_per_100k", "type": "quantitative", "title": "Suicide Rate/100k:"}
+        {"field": "gender", "type": "nominal","title":"Sex"},
+        {"field": "age", "type": "nominal","title":"Age Group"},
+      {"field": "rate_per_100k", "type": "quantitative", "title": "Suicide Rate/100k"}
     ]
       },
       "layer": [
