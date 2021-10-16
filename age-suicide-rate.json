@@ -51,6 +51,7 @@
       },
       "opacity": {"condition": {"selection": "hover", "value": 1}, "value": 0.075},
       "tooltip": [
+        {"field": "age", "type": "nominal","title":"Age Group"},
         {"field": "year", "type": "temporal","title":"Year"},
         {
           "field": "rate_per_100k",
@@ -85,6 +86,7 @@
         },
         "encoding": {
           "tooltip": [
+            {"field": "age", "type": "nominal","title":"Age Group"},
            {"field": "year", "type": "temporal","title":"Year"},
            {
             "field": "rate_per_100k",
@@ -106,6 +108,7 @@
         },
         "encoding": {
           "tooltip": [
+            {"field": "age", "type": "nominal","title":"Age Group"},
            {"field": "year", "type": "temporal","title":"Year"},
            {
             "field": "rate_per_100k",
@@ -127,6 +130,7 @@
         },
         "encoding": {
           "tooltip": [
+            {"field": "age", "type": "nominal","title":"Age Group"},
            {"field": "year", "type": "temporal","title":"Year"},
            {
             "field": "rate_per_100k",

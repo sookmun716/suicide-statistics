@@ -1,84 +1,108 @@
-
-
-  {
-    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-    "data": { "url": "https://raw.githubusercontent.com/sookmun716/suicide-statistics/main/Gender-suicide-rate.csv"},
-    "config": {
-    "view": {"stroke": "transparent" },
-    "axis": {"grid":false}
-    },
-    "spacing": 0,
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",  
+    "data": { "url": "https://raw.githubusercontent.com/sookmun716/suicide-statistics/main/Gender-suicide-rate.csv",
+      "format": {
+          "type": "csv"}},
     "hconcat": [{
-    "transform": [{
-    "filter": {"field": "gender", "equal": "female"}
-    }],
-    "title": "Female",
-    "mark": "bar",
-    "width": 350,
-    "encoding": {
-    "y": {
-    "field": "age",
-    "type": "ordinal",
-    "axis": null,
-    "sort": "descending"
+       
+      "transform": [{
+        "filter": {"field": "gender", "equal": "female"}
+      }],
+      "title": "Female",
+      "encoding": {
+        "y": {
+          "field": "age", "axis": null, "sort": "descending"
+        },
+        "x": {
+            "field": "rate_per_100k",
+            "title": "Suicide Rate/100k",
+            "type":"quantitative",
+            "sort": "descending",
+            "scale": {"domain": [0, 25]}
+            },
+            "color": {
+                "field": "gender",
+                "type": "ordinal",
+                "scale": {"range": ["#e7969c", "#1f77b4"]},
+                "legend": null
+                },
+            "tooltip": [
+            {"field": "rate_per_100k", "type": "quantitative", "title": "Suicide Rate/100k"}
+          ]
     },
-    "x": {
-    "field": "rate_per_100k",
-    "title": "Suicide Rate/100k",
-    "type":"quantitative",
-    "sort": "descending",
-    "scale": {"domain": [0, 25]}
-    },
-    "color": {
-    "field": "gender",
-    "type": "ordinal",
-    "scale": {"range": ["#e7969c", "#1f77b4"]},
-    "legend": null
-    }
-    }
+      "layer":[
+            {"mark": "bar",
+            "width": 400},
+            {"mark": {
+                "type": "text",
+                "color":"black",
+                "align": "left",
+                "baseline": "middle",
+                "dx": 3,
+                "width":100
+              },
+            "encoding": {
+              "text": {"field": "rate_per_100k", "format":".2f","type": "quantitative"},"color":{"value": "#FFFFFF"}
+            }    
+            }
+        ]
+      }
+    , {
+      "width": 20,
+      "view": {"stroke": null},
+      "mark": {
+        "type": "text",
+        "align": "center"
+      },
+      "encoding": {
+        "y": {"field": "age", "type": "ordinal", "axis": null, "sort": "descending"},
+        "text": {"field": "age", "type": "ordinal"}
+      }
     }, {
-    "width": 80,
-    "mark": {
-    "type": "text",
-    "align": "center"
-    },
-    "encoding": {
-    "y": {
-    "field": "age", 
-    "type": "ordinal", 
-    "axis": null,
-    "sort": "descending"
-    },
-    "text": {
-    "field": "age", 
-    "type": "ordinal"
-    }
-    }
-    }, {
-    "transform": [{
-    "filter": {"field": "gender", "equal": "male"}
+      "transform": [{
+        "filter": {"field": "gender", "equal": "male"}
+      }],
+      "title": "Male",
+      "encoding": {
+        "y": {
+          "field": "age", "title": null,
+          "axis": null, "sort": "descending"
+        },
+        "x": {
+            "field": "rate_per_100k",
+          "title": "Suicide Rate/100k",
+          "scale": {
+              "type": "linear"},
+          "axis": {"format": "s"}
+        },
+        
+        "color": {
+            "field": "gender",
+            "type": "ordinal",
+            "scale": {"range": ["#e7969c", "#1f77b4"]},
+            "legend": null
+            }
+        ,
+    "tooltip": [
+      {"field": "rate_per_100k", "type": "quantitative", "title": "Suicide Rate/100k:"}
+    ]
+      },
+      "layer": [
+        {"mark":"bar","width":400},
+        {"mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "dx":-3,
+            "width":300
+          },
+        "encoding": {
+          "text": {"field": "rate_per_100k","format":".2f", "type": "quantitative"},"color":{"value":"#FFFFFF"}}
+        } 
+      ]   
     }],
-    "title": "Male",
-    "mark": "bar",
-    "width": 350,
-    "encoding": {
-    "y": {
-    "field": "age", "title": null,
-    "type": "ordinal",
-    "axis": null,
-    "sort": "descending"
-    },
-    "x": {
-    "field": "rate_per_100k",
-    "type":"quantitative",
-    "title": "Suicide Rate/100k",
-    "scale": {"domain": [0, 25]}
-    },
-    "color": {
-    "field": "gender",
-    "type": "ordinal",
-    "legend": null
-    }
-    }
-    }]
-    }
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
+    } 
+  }
