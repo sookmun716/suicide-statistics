@@ -2,10 +2,6 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
-h1 {
-  font-weight: 900;
-}
-
 body {
   background-color: beige;
 }
@@ -25,7 +21,6 @@ body {
 .description h2,
 h1 {
   color: black;
-  margin-top: 0px;
 }
 
 .description-right {
@@ -36,19 +31,14 @@ h1 {
   padding-bottom: 20px;
 }
 
-.description-left {
-  background-color: beige;
-  color: black;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-}
-
 .pure-g {
   margin-bottom: 20px;
   color: black;
 }
 
-.small-font {
-  font-size: 14px;
+strong {
+  font-weight: bold;
+  font-style: italic;
+  color: #911f27;
+  font-size: 20px;
 }
