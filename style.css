@@ -6,6 +6,13 @@ body {
   background-color: beige;
 }
 
+strong {
+  font-weight: bold;
+  font-style: italic;
+  color: #911f27;
+  font-size: 20px;
+}
+
 .page {
   width: 1250px;
   background-color: beige;
@@ -34,11 +41,4 @@ h1 {
 .pure-g {
   margin-bottom: 20px;
   color: black;
-}
-
-.strong {
-  font-weight: bold;
-  font-style: italic;
-  color: #911f27;
-  font-size: 20px;
 }
