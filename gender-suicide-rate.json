@@ -31,7 +31,7 @@
                 },
             "tooltip": [
             {"field": "gender", "type": "nominal","title":"Sex"},
-            {"field": "age", "type": "nominal","title":"Age Group"},
+            {"field": "age", "type": "nominal","title":"Year"},
             {"field": "rate_per_100k", "type": "quantitative", "title": "Suicide Rate/100k"}
           ]
     },
@@ -90,7 +90,7 @@
         ,
     "tooltip": [
         {"field": "gender", "type": "nominal","title":"Sex"},
-        {"field": "age", "type": "nominal","title":"Age Group"},
+        {"field": "age", "type": "nominal","title":"Year"},
       {"field": "rate_per_100k", "type": "quantitative", "title": "Suicide Rate/100k"}
     ]
       },
